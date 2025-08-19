@@ -8,7 +8,7 @@ services:
       - .env
     command: ['sh', '-c', 'npx prisma db push && yarn start:prod']
     environment:
-      - DATABASE_URL=postgres://postgres:3322@postgres:5432/woork_room
+      - DATABASE_URL=postgres://postgres:nurik1234@postgres:5432/woork_room
       - REDIS_HOST=redis
       - REDIS_PORT=6379
     depends_on:
@@ -20,7 +20,7 @@ services:
       - '5433:5432'
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=3322
+      - POSTGRES_PASSWORD=nurik1234
       - POSTGRES_DB=woork_room
     healthcheck:
       test: ['CMD-SHELL', 'pg_isready -U postgres -d woork_room']
